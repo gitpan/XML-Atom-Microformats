@@ -1,0 +1,34 @@
+---
+abstract: 'parse microformats in Atom feeds'
+author:
+  - 'Toby Inkster <tobyink@cpan.org>'
+build_requires:
+  ExtUtils::MakeMaker: 6.42
+  Test::More: 0.61
+configure_requires:
+  ExtUtils::MakeMaker: 6.42
+distribution_type: module
+generated_by: 'Module::Install version 0.95'
+license: perl
+meta-spec:
+  url: http://module-build.sourceforge.net/META-spec-v1.4.html
+  version: 1.4
+name: XML-Atom-Microformats
+no_index:
+  directory:
+    - inc
+    - t
+recommends:
+  RDF::RDFa::Parser: 1.09_04
+requires:
+  HTML::Microformats: 0
+  RDF::Trine: 0.112
+  XML::Atom::OWL: 0
+  XML::LibXML: 1.60
+  perl: 5.8.0
+resources:
+  bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=XML-Atom-Microformats
+  homepage: http://search.cpan.org/dist/XML-Atom-Microformats/
+  license: http://dev.perl.org/licenses/
+  repository: http://goddamn.co.uk/viewvc/perlmods/XML-Atom-Microformats/
+version: 0.00_00
