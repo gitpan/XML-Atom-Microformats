@@ -28,6 +28,19 @@ my:v_0-00_00
 	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_00.tar.gz> ;
 	rdfs:comment    "Initial preview"@en .
 
+my:v_0-00_01
+
+	a               :Version ;
+	dc:issued       "2010-04-29"^^xsd:date ;
+	:revision       "0.00_01"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_01.tar.gz> ;
+	dcs:changeset [
+		a dcs:ChangeSet ;
+		dcs:versus my:v_0-00_00 ;
+		dcs:item
+			[ rdfs:label "Take advantage of new XML-Atom-OWL and HTML-Microformats features for better base/document URI handling."@en ]
+		] .
+
 #############################################################
 
 my:project
@@ -46,7 +59,7 @@ my:project
 	:tester         toby:i ;
 	:created        "2010-04-14"^^xsd:date ;
 	:license        <http://dev.perl.org/licenses/> ;
-	:release        my:v_0-00_00 .
+	:release        my:v_0-00_00 , my:v_0-00_01 .
 
 #############################################################
 

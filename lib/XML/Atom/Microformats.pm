@@ -28,11 +28,11 @@ use XML::Atom::OWL;
 
 =head1 VERSION
 
-0.00_00
+0.00_01
 
 =cut
 
-our $VERSION = '0.00_00';
+our $VERSION = '0.00_01';
 our $HAS_RDFA;
 
 BEGIN
@@ -84,8 +84,8 @@ sub new_feed
 	{
 		$awol = XML::Atom::OWL->new($xml, $base_uri, undef, RDF::Trine::Store::Memory->temporary_store)->consume;
 	}
-		
-	my $self = bless { 'AWOL' => $awol }, $class;
+	
+	my $self = bless { 'AWOL' => $awol , 'base' => $base_uri }, $class;
 	return $self->_find_contexts->_prepare_contexts;	
 }
 
@@ -96,7 +96,7 @@ sub _find_contexts
 	my $sparql = <<SPARQL;
 PREFIX awol: <http://bblfish.net/work/atom-owl/2006-06-06/#>
 PREFIX iana: <http://www.iana.org/assignments/relation/>
-SELECT ?entry ?entryid ?entrylink ?contenttype ?contentbody ?profile
+SELECT ?entry ?entryid ?entrylink ?contenttype ?contentbody ?contentbase ?contentlang ?profile
 WHERE
 {
 	?entry a awol:Entry ;
@@ -106,6 +106,8 @@ WHERE
 		awol:type ?contenttype ;
 		awol:body ?contentbody .
 	OPTIONAL { ?entry iana:self ?entrylink . }
+	OPTIONAL { ?content awol:base ?contentbase . }
+	OPTIONAL { ?content awol:lang ?contentlang . }
 	OPTIONAL
 	{
 		{ ?feed awol:entry ?entry ; iana:profile ?profile . }
@@ -124,7 +126,12 @@ SPARQL
 		$data->{$e}->{'entryid'}     ||= $row->{'entryid'}->literal_value;
 		$data->{$e}->{'contentbody'} ||= $row->{'contentbody'}->literal_value;
 		$data->{$e}->{'contenttype'} ||= $row->{'contenttype'}->literal_value;
-		$data->{$e}->{'entrylink'}   ||= (defined $row->{'entrylink'} ? $row->{'entrylink'}->uri : undef);
+		$data->{$e}->{'contentlang'} ||= $row->{'contentlang'}->literal_value
+			if defined $row->{'contentlang'};
+		$data->{$e}->{'contentbase'} ||= $row->{'contentbase'}->uri
+			if defined $row->{'contentbase'};
+		$data->{$e}->{'entrylink'}   ||= $row->{'entrylink'}->uri
+			if defined $row->{'entrylink'};
 		
 		if (defined $row->{'profile'})
 		{
@@ -146,12 +153,14 @@ sub _prepare_contexts
 			|| $context->{'contenttype'} eq 'application/xhtml+xml';
 		
 		my $dom;
-		my $html = sprintf("<html xmlns=\"http://www.w3.org/1999/xhtml\"><head><title></title></head><body><div>%s</div></body></html>",
+		my $html = sprintf("<html xml:lang=\"%s\" lang=\"%s\" xmlns=\"http://www.w3.org/1999/xhtml\"><head><title></title></head><body><div>%s</div></body></html>",
+			$context->{'contentlang'},
+			$context->{'contentlang'},
 			$context->{'contentbody'});
 		
 		my $hmf = HTML::Microformats->new_document(
 			$html,
-			($context->{'entrylink'} || $context->{'entryid'}),
+			($context->{'contentbase'} || $self->{'base'}),
 			type => $context->{'contenttype'});
 		
 		if ($@ || !defined $hmf)
@@ -162,6 +171,7 @@ sub _prepare_contexts
 			next;
 		}
 		
+		$hmf->{'context'}->{'document_uri'} = $context->{'entrylink'} || $context->{'entryid'};
 		$hmf->add_profile( @{$context->{'profiles'}} );
 		
 		$context->{'HMF'} = $hmf;
