@@ -41,6 +41,19 @@ my:v_0-00_01
 			[ rdfs:label "Take advantage of new XML-Atom-OWL and HTML-Microformats features for better base/document URI handling."@en ]
 		] .
 
+my:v_0-00_02
+
+	a               :Version ;
+	dc:issued       "2010-04-29"^^xsd:date ;
+	:revision       "0.00_02"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_02.tar.gz> ;
+	dcs:changeset [
+		a dcs:ChangeSet ;
+		dcs:versus my:v_0-00_01 ;
+		dcs:item
+			[ rdfs:label "List correct dependencies in Makefile.PL."@en ; a dcs:Bugfix ]
+		] .
+
 #############################################################
 
 my:project
@@ -59,7 +72,7 @@ my:project
 	:tester         toby:i ;
 	:created        "2010-04-14"^^xsd:date ;
 	:license        <http://dev.perl.org/licenses/> ;
-	:release        my:v_0-00_00 , my:v_0-00_01 .
+	:release        my:v_0-00_00 , my:v_0-00_01 , my:v_0-00_02 .
 
 #############################################################
 

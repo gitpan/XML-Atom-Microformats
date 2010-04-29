@@ -13,7 +13,7 @@ SYNOPSIS
      my $results = rdf_query($sparql, $feed->model);
 
 VERSION
-    0.00_01
+    0.00_02
 
 DESCRIPTION
     The XML::Atom::Microformats module brings the functionality of

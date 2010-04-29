@@ -28,11 +28,11 @@ use XML::Atom::OWL;
 
 =head1 VERSION
 
-0.00_01
+0.00_02
 
 =cut
 
-our $VERSION = '0.00_01';
+our $VERSION = '0.00_02';
 our $HAS_RDFA;
 
 BEGIN

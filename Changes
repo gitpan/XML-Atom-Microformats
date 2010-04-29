@@ -10,6 +10,9 @@ Home page:    <http://search.cpan.org/dist/XML-Atom-Microformats/>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=XML-Atom-Microformats>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.00_02 [2010-04-29]
+ - (Bugfix) List correct dependencies in Makefile.PL.
+
 0.00_01 [2010-04-29]
  - Take advantage of new XML-Atom-OWL and HTML-Microformats features for
    better base/document URI handling.

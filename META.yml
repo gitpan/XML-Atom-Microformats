@@ -21,9 +21,11 @@ no_index:
 recommends:
   RDF::RDFa::Parser: 1.09_04
 requires:
-  HTML::Microformats: 0
-  RDF::Trine: 0.112
-  XML::Atom::OWL: 0
+  HTML::Microformats: 0.00_08
+  JSON: 2.00
+  RDF::Query: 2.200
+  RDF::Trine: 0.118
+  XML::Atom::OWL: 0.04
   XML::LibXML: 1.60
   perl: 5.8.0
 resources:
@@ -31,4 +33,4 @@ resources:
   homepage: http://search.cpan.org/dist/XML-Atom-Microformats/
   license: http://dev.perl.org/licenses/
   repository: http://goddamn.co.uk/viewvc/perlmods/XML-Atom-Microformats/
-version: 0.00_01
+version: 0.00_02

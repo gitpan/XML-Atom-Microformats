@@ -36,6 +36,21 @@
     <file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_01.tar.gz"/>
     <revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.00_01</revision>
   </Version>
+  <Version rdf:about="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_02">
+    <dcs:changeset>
+      <dcs:ChangeSet>
+        <dcs:item>
+          <dcs:Bugfix>
+            <rdfs:label xml:lang="en">List correct dependencies in Makefile.PL.</rdfs:label>
+          </dcs:Bugfix>
+        </dcs:item>
+        <dcs:versus rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_01"/>
+      </dcs:ChangeSet>
+    </dcs:changeset>
+    <dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-04-29</dc:issued>
+    <file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_02.tar.gz"/>
+    <revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.00_02</revision>
+  </Version>
   <Project rdf:about="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/project">
     <bug-database rdf:resource="http://rt.cpan.org/Dist/Display.html?Queue=XML-Atom-Microformats"/>
     <created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-04-14</created>
@@ -49,6 +64,7 @@
     <programming-language>Perl</programming-language>
     <release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_00"/>
     <release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_01"/>
+    <release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_02"/>
     <repository>
       <SVNRepository>
         <browse rdf:resource="http://goddamn.co.uk/viewvc/perlmods/XML-Atom-Microformats/"/>

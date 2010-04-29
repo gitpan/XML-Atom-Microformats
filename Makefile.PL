@@ -16,9 +16,11 @@ license             'perl';
 
 test_requires       'Test::More' => '0.61';
 
-requires            'HTML::Microformats' => 0;
-requires            'RDF::Trine'         => '0.112';
-requires            'XML::Atom::OWL'     => 0;
+requires            'HTML::Microformats' => '0.00_08';
+requires            'JSON'               => '2.00';
+requires            'RDF::Trine'         => '0.118';
+requires            'RDF::Query'         => '2.200';
+requires            'XML::Atom::OWL'     => '0.04';
 requires            'XML::LibXML'        => '1.60';
 
 recommends          'RDF::RDFa::Parser'  => '1.09_04';
