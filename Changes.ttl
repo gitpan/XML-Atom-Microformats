@@ -26,7 +26,7 @@ my:v_0-00_00
 	dc:issued       "2010-04-28"^^xsd:date ;
 	:revision       "0.00_00"^^xsd:string ;
 	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_00.tar.gz> ;
-	rdfs:comment    "Initial preview"@en .
+	rdfs:label      "Initial preview"@en .
 
 my:v_0-00_01
 
@@ -54,13 +54,30 @@ my:v_0-00_02
 			[ rdfs:label "List correct dependencies in Makefile.PL."@en ; a dcs:Bugfix ]
 		] .
 
+my:v_0-001
+
+	a               :Version ;
+	dc:issued       "2010-12-21"^^xsd:date ;
+	:revision       "0.001"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.001.tar.gz> ;
+	rdfs:label      "First stable release"@en ;
+	dcs:changeset [
+		a dcs:ChangeSet ;
+		dcs:versus my:v_0-00_02 ;
+		dcs:item
+			[ rdfs:label "use HTML::Microformats 0.100."@en ] ,
+			[ rdfs:label "use XML::Atom::OWL 0.100."@en ] ,
+			[ rdfs:label "use RDF::Query 2.900."@en ] ,
+			[ rdfs:label "Improve test cases."@en ]
+		] .
+
 #############################################################
 
 my:project
 
 	a               :Project ;
 	:name           "XML-Atom-Microformats" ;
-	:shortdesc      "parse microformats in Atom feeds"@en ;
+	:shortdesc      "parse microformats in Atom content"@en ;
 	:programming-language  "Perl" ;
 	:homepage       <http://search.cpan.org/dist/XML-Atom-Microformats/> ;
 	:download-page  <http://search.cpan.org/dist/XML-Atom-Microformats/> ;
@@ -72,7 +89,7 @@ my:project
 	:tester         toby:i ;
 	:created        "2010-04-14"^^xsd:date ;
 	:license        <http://dev.perl.org/licenses/> ;
-	:release        my:v_0-00_00 , my:v_0-00_01 , my:v_0-00_02 .
+	:release        my:v_0-00_00 , my:v_0-00_01 , my:v_0-00_02 , my:v_0-001 .
 
 #############################################################
 

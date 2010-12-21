@@ -10,6 +10,12 @@ Home page:    <http://search.cpan.org/dist/XML-Atom-Microformats/>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=XML-Atom-Microformats>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.001 [2010-12-21] # First stable release
+ - Improve test cases.
+ - use HTML::Microformats 0.100.
+ - use RDF::Query 2.900.
+ - use XML::Atom::OWL 0.100.
+
 0.00_02 [2010-04-29]
  - (Bugfix) List correct dependencies in Makefile.PL.
 
@@ -17,5 +23,5 @@ Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
  - Take advantage of new XML-Atom-OWL and HTML-Microformats features for
    better base/document URI handling.
 
-0.00_00 [2010-04-28]
+0.00_00 [2010-04-28] # Initial preview
 

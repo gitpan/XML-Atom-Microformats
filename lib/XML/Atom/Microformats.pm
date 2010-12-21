@@ -1,6 +1,6 @@
 =head1 NAME
 
-XML::Atom::Microformats - parse microformats in Atom feeds
+XML::Atom::Microformats - parse microformats in Atom content
 
 =head1 SYNOPSIS
 
@@ -21,18 +21,12 @@ package XML::Atom::Microformats;
 use common::sense;
 use 5.008;
 
-use HTML::Microformats;
+use HTML::Microformats 0.100;
 use JSON;
 use RDF::Query;
-use XML::Atom::OWL;
+use XML::Atom::OWL 0.100;
 
-=head1 VERSION
-
-0.00_02
-
-=cut
-
-our $VERSION = '0.00_02';
+our $VERSION = '0.001';
 our $HAS_RDFA;
 
 BEGIN
@@ -193,7 +187,7 @@ have a E<lt>headE<gt> element, Atom E<lt>linkE<gt> is used instead:
 
 These links can be used on a per-entry basis, or for the whole feed.
 
-Because many pages fail to properly declare which profiles they use, there
+Because many feeds fail to properly declare which profiles they use, there
 are various profile management methods to tell XML::Atom::Microformats to
 assume the presence of particular profile URIs, even if they're actually
 missing.
@@ -250,7 +244,7 @@ For example:
 
 This method acts similarly to C<add_profile> but allows you to use
 names of microformats rather than URIs. Microformat names are case
-sensitive, and must match HTML::Microformats::Foo module names.
+sensitive, and must match HTML::Microformats::Format::Foo module names.
 
 C<entry_assume_profile> is a variant to allow you to add a profile which applies
 only to one specific entry within the feed, if you know that entry's ID.
@@ -440,7 +434,7 @@ sub all_objects
 	my ($self, $entry) = @_;
 	my $rv = {};
 	
-	foreach my $format (@HTML::Microformats::Formats)
+	foreach my $format (HTML::Microformats->formats)
 	{
 		$rv->{$format} = $self->objects($format, $entry);
 	}
@@ -584,7 +578,11 @@ sub entry_add_to_model
 		my $iter = $context->{'HMF'}->model->as_stream;
 		while (my $st = $iter->next)
 		{
-			$model->add_statement($st, RDF::Trine::Node::Resource->new($entry));
+			use RDF::TrineShortcuts;
+			$model->add_statement(
+				RDF::Trine::Statement->new(($st->nodes)[0..2]),
+				RDF::Trine::Node::Resource->new($entry),
+				);
 		}
 	}
 	

@@ -1,5 +1,5 @@
 NAME
-    XML::Atom::Microformats - parse microformats in Atom feeds
+    XML::Atom::Microformats - parse microformats in Atom content
 
 SYNOPSIS
      use XML::Atom::Microformats;
@@ -11,9 +11,6 @@ SYNOPSIS
  
      use RDF::TrineShortcuts qw(rdf_query);
      my $results = rdf_query($sparql, $feed->model);
-
-VERSION
-    0.00_02
 
 DESCRIPTION
     The XML::Atom::Microformats module brings the functionality of
@@ -48,7 +45,7 @@ DESCRIPTION
 
     These links can be used on a per-entry basis, or for the whole feed.
 
-    Because many pages fail to properly declare which profiles they use,
+    Because many feeds fail to properly declare which profiles they use,
     there are various profile management methods to tell
     XML::Atom::Microformats to assume the presence of particular profile
     URIs, even if they're actually missing.
@@ -77,7 +74,8 @@ DESCRIPTION
 
         This method acts similarly to "add_profile" but allows you to use
         names of microformats rather than URIs. Microformat names are case
-        sensitive, and must match HTML::Microformats::Foo module names.
+        sensitive, and must match HTML::Microformats::Format::Foo module
+        names.
 
         "entry_assume_profile" is a variant to allow you to add a profile
         which applies only to one specific entry within the feed, if you
