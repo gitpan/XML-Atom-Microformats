@@ -10,6 +10,9 @@ Home page:    <http://search.cpan.org/dist/XML-Atom-Microformats/>
 Bug tracker:  <http://rt.cpan.org/Dist/Display.html?Queue=XML-Atom-Microformats>
 Maintainer:   Toby Inkster <mailto:tobyink@cpan.org>
 
+0.002 [2010-12-22]
+ - (Bugfix) Remove spurious 'use RDF::TrineShortcuts'.
+
 0.001 [2010-12-21] # First stable release
  - Improve test cases.
  - use HTML::Microformats 0.100.

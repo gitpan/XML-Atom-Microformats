@@ -71,6 +71,19 @@ my:v_0-001
 			[ rdfs:label "Improve test cases."@en ]
 		] .
 
+my:v_0-002
+
+	a               :Version ;
+	dc:issued       "2010-12-22"^^xsd:date ;
+	:revision       "0.002"^^xsd:string ;
+	:file-release   <http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.002.tar.gz> ;
+	dcs:changeset [
+		a dcs:ChangeSet ;
+		dcs:versus my:v_0-001 ;
+		dcs:item
+			[ rdfs:label "Remove spurious 'use RDF::TrineShortcuts'."@en ; a dcs:Bugfix ]
+		] .
+
 #############################################################
 
 my:project
@@ -89,7 +102,7 @@ my:project
 	:tester         toby:i ;
 	:created        "2010-04-14"^^xsd:date ;
 	:license        <http://dev.perl.org/licenses/> ;
-	:release        my:v_0-00_00 , my:v_0-00_01 , my:v_0-00_02 , my:v_0-001 .
+	:release        my:v_0-00_00 , my:v_0-00_01 , my:v_0-00_02 , my:v_0-001 , my:v_0-002 .
 
 #############################################################
 

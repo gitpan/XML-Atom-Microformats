@@ -1,45 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rdf:RDF xmlns:dbug="http://ontologi.es/doap-bugs#" xmlns:dc="http://purl.org/dc/terms/" xmlns:dcs="http://ontologi.es/doap-changeset#" xmlns:doap="http://usefulinc.com/ns/doap#" xmlns:foaf="http://xmlns.com/foaf/0.1/" xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr0">
-	<dcs:item rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr1"/>
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r0">
+	<dcs:item rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r1"/>
 	<dcs:versus rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_00"/>
 	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#ChangeSet"/>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr1">
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r1">
 	<rdfs:label xml:lang="en">Take advantage of new XML-Atom-OWL and HTML-Microformats features for better base/document URI handling.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr2">
-	<dcs:item rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr3"/>
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r10">
+	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#Bugfix"/>
+	<rdfs:label xml:lang="en">Remove spurious 'use RDF::TrineShortcuts'.</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r11">
+	<doap:browse rdf:resource="http://goddamn.co.uk/viewvc/perlmods/XML-Atom-Microformats/"/>
+	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#SVNRepository"/>
+</rdf:Description>
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r2">
+	<dcs:item rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r3"/>
 	<dcs:versus rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_01"/>
 	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#ChangeSet"/>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr3">
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r3">
 	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#Bugfix"/>
 	<rdfs:label xml:lang="en">List correct dependencies in Makefile.PL.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr4">
-	<dcs:item rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr5"/>
-	<dcs:item rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr6"/>
-	<dcs:item rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr7"/>
-	<dcs:item rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr8"/>
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r4">
+	<dcs:item rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r5"/>
+	<dcs:item rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r6"/>
+	<dcs:item rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r7"/>
+	<dcs:item rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r8"/>
 	<dcs:versus rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_02"/>
 	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#ChangeSet"/>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr5">
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r5">
 	<rdfs:label xml:lang="en">use HTML::Microformats 0.100.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr6">
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r6">
 	<rdfs:label xml:lang="en">use XML::Atom::OWL 0.100.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr7">
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r7">
 	<rdfs:label xml:lang="en">use RDF::Query 2.900.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr8">
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r8">
 	<rdfs:label xml:lang="en">Improve test cases.</rdfs:label>
 </rdf:Description>
-<rdf:Description rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr9">
-	<doap:browse rdf:resource="http://goddamn.co.uk/viewvc/perlmods/XML-Atom-Microformats/"/>
-	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#SVNRepository"/>
+<rdf:Description rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r9">
+	<dcs:item rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r10"/>
+	<dcs:versus rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-001"/>
+	<rdf:type rdf:resource="http://ontologi.es/doap-changeset#ChangeSet"/>
 </rdf:Description>
 <rdf:Description rdf:about="file:///home/tai/src/perlmods/XML-Atom-Microformats/Changes.ttl">
 	<dc:creator rdf:resource="http://tobyinkster.co.uk/#i"/>
@@ -59,21 +68,29 @@
 	<doap:name>XML-Atom-Microformats</doap:name>
 	<doap:programming-language>Perl</doap:programming-language>
 	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-001"/>
+	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-002"/>
 	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_00"/>
 	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_01"/>
 	<doap:release rdf:resource="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_02"/>
-	<doap:repository rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr9"/>
+	<doap:repository rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r11"/>
 	<doap:shortdesc xml:lang="en">parse microformats in Atom content</doap:shortdesc>
 	<doap:tester rdf:resource="http://tobyinkster.co.uk/#i"/>
 	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#Project"/>
 </rdf:Description>
 <rdf:Description rdf:about="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-001">
-	<dcs:changeset rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr4"/>
+	<dcs:changeset rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r4"/>
 	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-21</dc:issued>
 	<doap:file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.001.tar.gz"/>
 	<doap:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.001</doap:revision>
 	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
 	<rdfs:label xml:lang="en">First stable release</rdfs:label>
+</rdf:Description>
+<rdf:Description rdf:about="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-002">
+	<dcs:changeset rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r9"/>
+	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-12-22</dc:issued>
+	<doap:file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.002.tar.gz"/>
+	<doap:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.002</doap:revision>
+	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
 </rdf:Description>
 <rdf:Description rdf:about="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_00">
 	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-04-28</dc:issued>
@@ -83,14 +100,14 @@
 	<rdfs:label xml:lang="en">Initial preview</rdfs:label>
 </rdf:Description>
 <rdf:Description rdf:about="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_01">
-	<dcs:changeset rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr0"/>
+	<dcs:changeset rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r0"/>
 	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-04-29</dc:issued>
 	<doap:file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_01.tar.gz"/>
 	<doap:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.00_01</doap:revision>
 	<rdf:type rdf:resource="http://usefulinc.com/ns/doap#Version"/>
 </rdf:Description>
 <rdf:Description rdf:about="http://purl.org/NET/cpan-uri/dist/XML-Atom-Microformats/v_0-00_02">
-	<dcs:changeset rdf:nodeID="r41F77D8A0CDF11E0B933DD9723D86CEDr2"/>
+	<dcs:changeset rdf:nodeID="rE5A29FD20E1511E08F159B5C6778CA71r2"/>
 	<dc:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2010-04-29</dc:issued>
 	<doap:file-release rdf:resource="http://backpan.cpan.org/authors/id/T/TO/TOBYINK/XML-Atom-Microformats-0.00_02.tar.gz"/>
 	<doap:revision rdf:datatype="http://www.w3.org/2001/XMLSchema#string">0.00_02</doap:revision>

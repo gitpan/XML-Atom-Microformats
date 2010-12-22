@@ -26,7 +26,7 @@ use JSON;
 use RDF::Query;
 use XML::Atom::OWL 0.100;
 
-our $VERSION = '0.001';
+our $VERSION = '0.002';
 our $HAS_RDFA;
 
 BEGIN
@@ -578,7 +578,6 @@ sub entry_add_to_model
 		my $iter = $context->{'HMF'}->model->as_stream;
 		while (my $st = $iter->next)
 		{
-			use RDF::TrineShortcuts;
 			$model->add_statement(
 				RDF::Trine::Statement->new(($st->nodes)[0..2]),
 				RDF::Trine::Node::Resource->new($entry),
