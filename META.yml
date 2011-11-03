@@ -4,46 +4,47 @@ author:
   - 'Toby Inkster <tobyink@cpan.org>'
 build_requires:
   ExtUtils::MakeMaker: 6.42
-  Module::Signature: 0.66
   Test::More: 0.61
 configure_requires:
   ExtUtils::MakeMaker: 6.42
 distribution_type: module
-generated_by: 'Module::Install version 1.00'
+generated_by: 'Module::Install version 1.02'
 keywords:
-  - XML
   - Atom
-  - Microformats
-  - RDFa
-  - RDF
-  - SemWeb
-  - JSON
   - HTML
+  - JSON
+  - Microformats
+  - RDF
+  - RDFa
+  - SemWeb
+  - 'Semantic Web'
   - XHTML
-  - Semantic
-  - Web
+  - XML
 license: perl
 meta-spec:
   url: http://module-build.sourceforge.net/META-spec-v1.4.html
   version: 1.4
+module_name: XML::Atom::Microformats
 name: XML-Atom-Microformats
 no_index:
   directory:
+    - examples
     - inc
     - t
-recommends:
-  RDF::RDFa::Parser: 1.093
+    - xt
 requires:
   HTML::Microformats: 0.100
   JSON: 2.00
   RDF::Query: 2.900
-  RDF::Trine: 0.118
+  RDF::RDFa::Parser: 1.096
+  RDF::Trine: 0.135
   XML::Atom::OWL: 0.100
-  XML::LibXML: 1.60
-  perl: 5.8.0
+  XML::LibXML: 1.62
+  common::sense: 0
+  perl: 5.10.0
 resources:
   bugtracker: http://rt.cpan.org/Dist/Display.html?Queue=XML-Atom-Microformats
-  homepage: http://search.cpan.org/dist/XML-Atom-Microformats/
+  homepage: https://metacpan.org/release/XML-Atom-Microformats
   license: http://dev.perl.org/licenses/
-  repository: http://goddamn.co.uk/viewvc/perlmods/XML-Atom-Microformats/
-version: 0.002
+  repository: http://goddamn.co.uk/svn-web/perlmods/browse/XML-Atom-Microformats/
+version: 0.003
