@@ -4,13 +4,14 @@ NAME
 SYNOPSIS
      use XML::Atom::Microformats;
  
-     my $feed = HTML::Microformats
-                 ->new_feed($xml, $base_uri)
-                 ->assume_profile(qw(hCard hCalendar));
+     my $feed = XML::Atom::Microformats
+        -> new_feed( $xml, $base_uri )
+        -> assume_profile( qw(hCard hCalendar) );
      print $feed->json(pretty => 1);
  
-     use RDF::TrineShortcuts qw(rdf_query);
-     my $results = rdf_query($sparql, $feed->model);
+     my $results = RDF::Query
+        -> new( $sparql )
+        -> execute( $feed->model );
 
 DESCRIPTION
     The XML::Atom::Microformats module brings the functionality of
@@ -189,7 +190,7 @@ AUTHOR
     Toby Inkster <tobyink@cpan.org>.
 
 COPYRIGHT
-    Copyright 2010-2011 Toby Inkster
+    Copyright 2010-2012 Toby Inkster
 
     This library is free software; you can redistribute it and/or modify it
     under the same terms as Perl itself.

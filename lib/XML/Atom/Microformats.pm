@@ -2,7 +2,7 @@ package XML::Atom::Microformats;
 
 use 5.010;
 use autodie;
-use common::sense;
+use strict;
 use utf8;
 
 use HTML::Microformats 0.100 qw();
@@ -13,10 +13,10 @@ use XML::Atom::OWL 0.100 qw();
 
 our ($VERSION, $AUTHORITY, $HAS_RDFA);
 BEGIN {
-	$XML::Atom::Microformats::VERSION   = '0.003';
+	$XML::Atom::Microformats::VERSION   = '0.004';
 	$XML::Atom::Microformats::AUTHORITY = 'cpan:TOBYINK';
 	$XML::Atom::Microformats::HAS_RDFA  =
-		eval "use RDF::RDFa::Parser 1.096; 1;" || 0;
+		eval "use RDF::RDFa::Parser 1.097; 1" || 0;
 }
 
 sub new_feed
@@ -393,13 +393,14 @@ XML::Atom::Microformats - parse microformats in Atom content
 
  use XML::Atom::Microformats;
  
- my $feed = HTML::Microformats
-             ->new_feed($xml, $base_uri)
-             ->assume_profile(qw(hCard hCalendar));
+ my $feed = XML::Atom::Microformats
+    -> new_feed( $xml, $base_uri )
+    -> assume_profile( qw(hCard hCalendar) );
  print $feed->json(pretty => 1);
  
- use RDF::TrineShortcuts qw(rdf_query);
- my $results = rdf_query($sparql, $feed->model);
+ my $results = RDF::Query
+    -> new( $sparql )
+    -> execute( $feed->model );
  
 =head1 DESCRIPTION
 
@@ -416,7 +417,7 @@ a JSON string, or an RDF::Trine model.
 
 =head2 Constructor
 
-=over 4
+=over
 
 =item C<< XML::Atom::Microformats->new_feed($xml, $base_url) >>
 
@@ -446,7 +447,7 @@ are various profile management methods to tell XML::Atom::Microformats to
 assume the presence of particular profile URIs, even if they're actually
 missing.
 
-=over 4
+=over
 
 =item C<< add_profile(@profiles) >>
 
@@ -497,7 +498,7 @@ all known microformats.
 You can probably skip this section. The C<data>, C<json> and
 C<model> methods will automatically do this for you.
 
-=over 4
+=over
 
 =item C<< parse_microformats >>
 
@@ -518,7 +519,7 @@ added some profiles between runs of C<parse_microformats>.
 These methods allow you to retrieve the feed's data, and do things
 with it.
 
-=over 4
+=over
 
 =item C<< objects($format) >>
 
@@ -626,7 +627,7 @@ Toby Inkster E<lt>tobyink@cpan.orgE<gt>.
 
 =head1 COPYRIGHT
 
-Copyright 2010-2011 Toby Inkster
+Copyright 2010-2012 Toby Inkster
 
 This library is free software; you can redistribute it and/or modify it
 under the same terms as Perl itself.

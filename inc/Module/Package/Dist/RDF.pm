@@ -1,21 +1,36 @@
 #line 1
 package Module::Package::Dist::RDF;
 
-use 5.008003;
-our $VERSION = '0.001';
+my $explanation = q<
+	This is the component of Module::Package::RDF which gets
+	bundled with the distribution.
+>;
 
-package Module::Package::Dist::RDF::standard;
-
-use 5.008003;
+use 5.005;
 use strict;
-use base qw[Module::Package::Dist];
-our $VERSION = '0.001';
+
+BEGIN {
+	$Module::Package::Dist::RDF::AUTHORITY = 'cpan:TOBYINK';
+	$Module::Package::Dist::RDF::VERSION   = '0.008';
+	@Module::Package::Dist::RDF::ISA       = 'Module::Package::Dist';
+}
 
 sub _main
 {
 	my ($self) = @_;
 	$self->mi->trust_meta_yml;
 	$self->mi->auto_install;
+}
+
+{
+	package Module::Package::Dist::RDF::standard;
+	use 5.005;
+	use strict;
+	BEGIN {
+		$Module::Package::Dist::RDF::standard::AUTHORITY = 'cpan:TOBYINK';
+		$Module::Package::Dist::RDF::standard::VERSION   = '0.008';
+		@Module::Package::Dist::RDF::standard::ISA       = 'Module::Package::Dist::RDF';
+	}
 }
 
 1;
